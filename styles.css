@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.toolbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #444;
+}
+
+.toolbar button, .toolbar select, .toolbar input {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toolbar button:hover, .toolbar select:hover, .toolbar input:hover {
+    background-color: #777;
+}
+
+.toolbar button .material-icons {
+    font-size: 18px;
+}
+
+.find-replace {
+    margin: 15px 10px;
+}
+
+.find-replace input {
+    padding: 8px;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.find-replace button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #555;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.find-replace button:hover {
+    background-color: #777;
+}
+
+.editor {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    height: 70vh;
+    margin: 0 10px;
+    overflow-y: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

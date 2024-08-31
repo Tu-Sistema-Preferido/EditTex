@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="format('bold')" title="Negrita"><span class="material-icons">format_bold</span></button>
+        <button onclick="format('italic')" title="Cursiva"><span class="material-icons">format_italic</span></button>
+        <button onclick="format('underline')" title="Subrayado"><span class="material-icons">format_underlined</span></button>
+        <button onclick="format('strikethrough')" title="Tachado"><span class="material-icons">strikethrough_s</span></button>
+        <button onclick="format('justifyLeft')" title="Alinear a la izquierda"><span class="material-icons">format_align_left</span></button>
+        <button onclick="format('justifyCenter')" title="Alinear al centro"><span class="material-icons">format_align_center</span></button>
+        <button onclick="format('justifyRight')" title="Alinear a la derecha"><span class="material-icons">format_align_right</span></button>
+        <button onclick="format('justifyFull')" title="Justificar"><span class="material-icons">format_align_justify</span></button> <!-- Botón de justificar -->
+        <button onclick="format('insertOrderedList')" title="Lista ordenada"><span class="material-icons">format_list_numbered</span></button>
+        <button onclick="format('insertUnorderedList')" title="Lista desordenada"><span class="material-icons">format_list_bulleted</span></button>
+        <button onclick="format('undo')" title="Deshacer"><span class="material-icons">undo</span></button>
+        <button onclick="format('redo')" title="Rehacer"><span class="material-icons">redo</span></button>
+        <select onchange="format('fontName', this.value)" title="Fuente">
+            <option value="">Fuente</option>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+        <select onchange="format('fontSize', this.value)" title="Tamaño de fuente">
+            <option value="">Tamaño</option>
+            <option value="1">Pequeño</option>
+            <option value="2">Normal</option>
+            <option value="3">Grande</option>
+            <option value="4">Más Grande</option>
+            <option value="5">Muy Grande</option>
+            <input type="color" onchange="format('foreColor', this.value)" title="Color de texto">
+            <input type="color" onchange="format('backColor', this.value)" title="Color de fondo">
+            <button onclick="insertImage()" title="Insertar imagen"><span class="material-icons">image</span></button>
+            <button onclick="insertTable()" title="Insertar tabla"><span class="material-icons">table_chart</span></button>
+            <button onclick="format('removeFormat')" title="Eliminar formato"><span class="material-icons">format_clear</span></button>
+            <button onclick="format('createLink', prompt('URL del enlace:'))" title="Insertar enlace"><span class="material-icons">link</span></button>
+            <button onclick="format('unlink')" title="Eliminar enlace"><span class="material-icons">link_off</span></button>
+        </select>
+    </div>
+
+    <div class="toolbar">
+        <button onclick="saveDocument()" title="Guardar documento"><span class="material-icons">save</span></button>
+        <button onclick="loadDocument()" title="Cargar documento"><span class="material-icons">folder_open</span></button>
+        <button onclick="saveAsText()" title="Guardar como texto"><span class="material-icons">description</span></button>
+
+        <div class="find-replace">
+            <input type="text" id="find" placeholder="Buscar">
+            <input type="text" id="replace" placeholder="Reemplazar">
+            <button onclick="findAndReplace()">Buscar y Reemplazar</button>
+        </div>
+    </div>
+
+    <div class="editor" contenteditable="true">
+        <p>Escribe aquí...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
