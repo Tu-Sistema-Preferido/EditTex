@@ -69,3 +69,63 @@ body {
     overflow-y: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column-reverse; /* Colocar la barra de herramientas al final */
+    }
+
+    .toolbar {
+        display: flex;
+        flex-direction: row; /* Asegurarse de que los botones estén en fila */
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+        padding: 5px; /* Ajustar padding */
+    }
+
+    .toolbar button,
+    .toolbar select,
+    .toolbar input[type="color"] {
+        padding: 4px; /* Mantener padding pequeño */
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column-reverse; /* Colocar la barra de herramientas al final */
+    }
+
+    .toolbar {
+        display: flex;
+        flex-direction: row; /* Asegurarse de que los botones estén en fila */
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+        padding: 5px; /* Ajustar padding */
+    }
+
+    .toolbar button,
+    .toolbar select,
+    .toolbar input[type="color"] {
+        padding: 4px; /* Mantener padding pequeño */
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        flex-direction: column-reverse; /* Colocar la barra de herramientas al final */
+    }
+
+    .toolbar {
+        display: flex;
+        flex-direction: row; /* Asegurarse de que los botones estén en fila */
+        overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+        padding: 5px; /* Ajustar padding */
+    }
+
+    .toolbar button,
+    .toolbar select,
+    .toolbar input[type="color"] {
+        padding: 4px; /* Mantener padding pequeño */
+        font-size: 10px; /* Tamaño de fuente más pequeño */
+    }
+}
